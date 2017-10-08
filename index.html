@@ -1,0 +1,27 @@
+<!-- html generated using html:5 emmet template -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp"> <!-- refer to your module name -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Angular example</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- angular.js downloaded from angularjs.org and our app.js -->
+  <script src="angular.js"></script>
+  <script src="angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="services.js"></script>
+  <script src="components.js"></script>
+</head>
+
+<body ng-controller="MyController"> <!-- refer to your controller name -->
+
+  <h1>{{ title }}</h1>
+
+  <div ng-view />
+
+</body>
+</html>

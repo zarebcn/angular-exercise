@@ -1,0 +1,37 @@
+.list {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+section {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  /* This flexbox container has horizontal (row) direction */
+  display: flex;
+  flex-direction: row;
+}
+
+.details {
+  background-color: #eee;
+  padding: 10px;
+  /* This flexbox item grows to take the remaining space of the container */
+  flex-grow: 1;
+}
+
+header {
+  font-weight: bold;
+}
+
+.list section:nth-child(odd) {
+  background-color: lightgray;
+}
+
+section img {
+  height: 150px;
+  margin-right: 10px;
+}
+
+.book {
+    background-color: lightgrey;
+}
