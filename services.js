@@ -71,9 +71,11 @@ myApp.factory('bookService', function($http) {
 
       const addBookPromise = responsePromise.then(function(response) {
 
-        console.log("API response received from promise of reponse");
-
+        //console.log("API response received from promise of reponse");
+        const book = response.data;
         console.log("Adding book");
+        console.log("Book added", book);
+        return book;
       });
 
       return addBookPromise;

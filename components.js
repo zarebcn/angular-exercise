@@ -20,12 +20,13 @@ myApp.component('bookListPage', {
     this.addBook = function() {
 
         const addBookPromise = bookService.addBook(this.newBook);
-        addBookPromise.then(
-            booksPromise.then(books => {
+        addBookPromise.then(books => {
+            this.newBook = {};
+            bookService.getBooks().then(books => {
                 console.log("books received from promise of books");
                 this.books = books;
-                this.newBook = {};
-        }));
+            });
+        });
 
         this.goToBookPage = function(book) {
       // $location lets us change to one of the paths in $routeProvider
